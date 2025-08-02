@@ -1,0 +1,39 @@
+{
+    // 开启自动换行
+    "editor.wordWrap": "on",
+    // 行高为1.4倍
+    "editor.lineHeight": 1.4,
+    // 设置字符分割线
+    "editor.rulers": [120],
+    "editor.detectIndentation": false,
+    "editor.tabSize": 4,
+    "files.trimTrailingWhitespace": true,
+    // 移除js代码格式化后多余的分号
+    "javascript.format.semicolons": "remove",
+    // 移除ts代码格式化后多余的分号
+    "typescript.format.semicolons": "remove",
+    "editor.guides.bracketPairs": true,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.minimap.enabled": false,
+    // 设置折叠策略为基于代码缩进的折叠方式
+    "editor.foldingStrategy": "indentation",
+    // 光标位于空格之前，自动关闭括号
+	"editor.autoClosingBrackets": "beforeWhitespace",
+	// 光标位于空格之前，自动关闭引号
+	"editor.autoClosingQuotes": "beforeWhitespace",
+    "editor.autoClosingDelete": "always",
+    "editor.autoClosingOvertype": "always",
+    // 设置对话框为自定义模式，意味着对话框使用 VSCode自身样式，而不是操作系统默认样式
+    "window.dialogStyle": "custom",
+    // 设置启动编辑器行为为“无”，开启时直接进入工作区
+    "workbench.startupEditor": "none",
+    // 设置工作区颜色主题(需安装 One Dark Pro Darker 主题 )
+    // 开启自动猜测文件编码
+    "files.autoGuessEncoding": true,
+    "workbench.colorTheme": "Quiet Light",
+    "terminal.integrated.inheritEnv": false,
+    "workbench.editor.enablePreview": false,
+    "github.copilot.nextEditSuggestions.enabled": true,
+}
+
+
