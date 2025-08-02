@@ -1,0 +1,43 @@
+<html>
+
+<h2 style="color: #B72415; text-align: center;">
+    ${topItem.getField("title")}
+</h2>
+
+<table border="1" style="border-collapse: collapse; width: 100%;">
+<tr>
+<td><b>期刊: </b>${topItem.getField('publicationTitle')}</td>
+<tr>
+<td><b>作者:</b>${topItem.getCreators().map((v)=>v.firstName+" "+v.lastName).join("; ")}</td>
+</tr>
+<td><b>发表日期: </b>${topItem.getField("date")}</td>
+ <!-- 原文链接 -->
+    <tr><td style="border: 1px solid black;">
+        ${(() => {
+          const attachments = Zotero.Items.get(topItem.getAttachments());
+          if (attachments && attachments.length > 0) {
+            return `<b>原文链接: </b><a href="zotero://open-pdf/0_${attachments[0].key}">${attachments[0].getFilename()}</a>`;
+          } else {
+            return `<b>原文链接: </b>`;
+          }
+        })()}
+      </td></tr>
+<tr>
+    <td><b>概述: </b></td>
+</tr>
+<table>
+
+<h3 style="color:  #E65100; background-color:  #FFF8E1;">💡创新点</h3>
+<blockquote>● <br>● <br>● </blockquote>
+<h3 style="color:#2E7D32; background-color:    #F6FAEF;">📚文献综述</h3>
+<blockquote>● <br>● <br>● <br>●<br>●<br>●</blockquote>
+<h3 style="color: #006064; background-color:   #E8FBFB;">🔬算法模型</h3>
+<blockquote>● <br>● <br>● <br>●<br>●<br>●</blockquote>
+<h3 style="color:#4D4D4D; background-color:    #F5F5F5;">🧩实验场景</h3>
+<blockquote>● <br>● <br>● <br>●<br>●</blockquote>
+<h3 style="color:#4A69D3; background-color:   #EAF1FD;">📜结论</h3>
+<blockquote>● <br>● <br>● </blockquote>
+<h3 style="color:#93150B; background-color:   #FFF5E4;">🤔思考</h3>
+<blockquote>● <br>● <br>● </blockquote>
+
+</html>
